@@ -50,11 +50,15 @@ function App() {
       if (message.type === "transcript" && message.transcriptType === "final" && message.transcript) {
         log(`${message.role}: ${message.transcript}`);
       }
+      else{
+        log("message:"+JSON.stringify(message));
+      }
     });
 
-    vapi.on("error", (err) => {
-      log(`Error: ${err.message || err.toString()}`);
-    });
+    vapi.on('error', (err) => {
+  console.error("Vapi Error:", err);
+  log("Error: " + JSON.stringify(err));
+});
 
     return () => {
       vapi.stop();
