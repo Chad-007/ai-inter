@@ -12,5 +12,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['@daily-co/daily-js', 'events']
+  },
+  server: {
+    host: '0.0.0.0', 
+    port: 5173     
   }
 });
