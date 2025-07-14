@@ -71,7 +71,7 @@ function App() {
         silenceTimeoutSeconds: 30
       });
     } catch (err) {
-      log("Start failed: " + err);
+      log("start failed: " + err);
       console.error(err);
     }
   };
